@@ -1,6 +1,9 @@
 from person import Person
 from bank import BankAccount
+from currency import Currency
 
+c1= Currency(10, 50)
+c2= Currency(5,75)
 p = Person("Piyush", 18, "Varanasi")
 b = BankAccount(p, "PNB Piyush National Bank", 12345, 1000)
 print(b)
