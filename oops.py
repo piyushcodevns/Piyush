@@ -6,7 +6,6 @@ class Regression:
         self.x = x
         self.y = y
 
-        # def getLine(self):
         n = len(self.x)
         x2 = [i * i for i in self.x]
         y2 = [i * i for i in self.y]
