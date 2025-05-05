@@ -21,7 +21,3 @@ class Digit:
         self.i = self.i%(10**(self.icount-1))
         self.icount -=1
         return res
-
-d=Digit(56474)
-for i in d:
-    print(i)
