@@ -1,20 +1,20 @@
 class Currency:
     def __init__(self, rupees, paisa):
-        self.rupees = rupees
-        self.paisa = paisa
+        self.paisa = rupees*100 + paisa
+        
 
     def __str__(self):
-        return f"{self.rupees} rupees and {self.paisa} paisa"
+        rs=self.paisa//100 
+        ps=self.paisa % 100
+        return f"₹ {rs}.{ps}"
 
-    def add(self, other):
+    def __add__(self, other):
         paisa = self.paisa + other.paisa
-        rupees = self.rupees + other.rupees + (paisa // 100)
-        return Currency(rupees, paisa % 100)
+        # rupees = self.rupees + other.rupees + (paisa // 100)
+        return Currency(0, paisa)
 
     def subtract(self, other):
-        total_self = self.rupees * 100 + self.paisa
-        total_other = other.rupees * 100 + other.paisa
-        if total_self < total_other:
+        if self.paisa < other.paisa:
             raise ValueError("Insufficient balance")
-        remaining = total_self - total_other
-        return Currency(remaining // 100, remaining % 100)
+        remaining = self.paisa - other.paisa
+        return Currency(0, remaining)
