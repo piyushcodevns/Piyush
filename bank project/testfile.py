@@ -1,13 +1,9 @@
-from person import Person
-from bank import BankAccount
 from currency import Currency
-from digit import Digit
+from bank import BankAccount
 
-c1 = Currency( 10, 50)
-c2 = Currency(5, 75)
-p = Person("Piyush", 18, "Varanasi")
-b = BankAccount(p, "PNB Piyush National Bank", 12345, 1000) 
-digit= Digit(56474)
-print(digit)
-print(c1,c2)
-print(c1+ c2)
+account = BankAccount("Alice", "PNB", "12345", Currency(0, 50))  
+try:
+    account.deposit(Currency(0, 50)) 
+    account.withdraw(Currency(1, 0)) 
+except ValueError as e:
+    print(e)

@@ -12,8 +12,10 @@ class Currency:
         # rupees = self.rupees + other.rupees + (paisa // 100)
         return Currency(0, paisa)
 
-    def subtract(self, other):
-        if self.paisa < other.paisa:
-            raise ValueError("Insufficient balance")
+    def __sub__ (self, other):
+        
         remaining = self.paisa - other.paisa
         return Currency(0, remaining)
+    
+    def __eq__(self, other):
+        return self.paisa == other.paisa
