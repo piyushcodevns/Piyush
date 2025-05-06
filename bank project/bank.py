@@ -9,17 +9,17 @@ class BankAccount:
         self.accountno = accountno
         self.balance = balance
 
-    # def deposit(self,depositamount):
-    #         self.balance += depositamount
-    #         print("Updated Balance:", self.balance)
+    def deposit(self,depositamount):
+            self.balance += depositamount
+            print("Updated Balance:", self.balance)
 
-    # def withdraw(self,amount):
-    #         self.balance -= amount
+    def withdraw(self,amount):
+            self.balance -= amount
 
     def validate_balance(self):
          if self.balance < 0:
             raise ValueError("Error: Balance cannot be Zero or Negative")
-original_deposit = BankAccount.deposit
+
 def new_deposit(self, depositamount):
     BankAccount.deposit(self, depositamount)
     self.validate_balance()  
