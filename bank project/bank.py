@@ -1,42 +1,31 @@
 from person import Person
-
-
-
 class BankAccount:
     def __init__(self, customer, bank_name, accountno,balance):
         self.name = customer
         self.bank_name = "PNB Piyush National Bank"
         self.accountno = accountno
         self.balance = balance
+ 
 
-    def deposit(self,depositamount):
+    def deposit(self, depositamount):
+        if depositamount.paisa > 0:
             self.balance += depositamount
             print("Updated Balance:", self.balance)
+        else:
+            print("Deposit amount must be greater than zero.")
 
-    def withdraw(self,amount):
+    def withdraw(self, amount):
+        if amount.paisa > self.balance.paisa:
+            print("Insufficient funds! Withdrawal denied.")
+        else:
             self.balance -= amount
+            print("Updated Balance:", self.balance)
 
-    def validate_balance(self):
-         if self.balance < 0:
-            raise ValueError("Error: Balance cannot be Zero or Negative")
-
-def new_deposit(self, depositamount):
-    BankAccount.deposit(self, depositamount)
-    self.validate_balance()  
-
-original_withdraw = BankAccount.withdraw
-def new_withdraw(self, amount):
-    BankAccount.withdraw(self, amount)
-    self.validate_balance()  
-
-BankAccount.deposit = new_deposit
-BankAccount.withdraw = new_withdraw
- 
-def detail(self):
+    def detail(self):
         print(f"Account Holder: {self.name}")
         print(f"Bank Name: {self.bank_name}")
         print(f"Account Number: {self.accountno}")
         print(f"Balance: {self.balance}")
 
-def __str__(self):
+    def __str__(self):
         return f"Account Holder: {self.name}, Bank Name: {self.bank_name}, Account Number: {self.accountno}, Balance: {self.balance}"

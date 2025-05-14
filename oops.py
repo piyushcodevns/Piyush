@@ -25,16 +25,6 @@ class Regression:
     def __str__(self):
         return "self.x={0}, self.y={1}".format(self.a, self.b, self.r)
 
-    # def makeGraph(self):
-    #     plt.scatter(self.x, self.y, color="blue", label="Data Points")
-    #     plt.plot(self.x, self.y, color="red", label="Regression Line")
-    #     plt.xlabel("X-axis")
-    #     plt.ylabel("Y-axis")
-    #     plt.title("Regression Line and Data Points")
-    #     plt.legend()
-    #     plt.grid(True)
-    #     plt.show()
-
     def getLine(self):
         n = len(self.x)
         x2 = [i * i for i in self.x]
