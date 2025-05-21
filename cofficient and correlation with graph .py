@@ -38,3 +38,6 @@ def makeDataLineGraph(y, x, title):
 
     return a, b, r
 a, b, r = makeDataLineGraph(y, x, title="Graph of y= x")  
+print(f"Interect (a) = {a}")
+print(f"Slope (b) = {b}")
+print(f"Correlation (r) = {r}")
