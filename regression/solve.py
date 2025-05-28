@@ -1,7 +1,7 @@
-import fullregression as fq
+from allll import RegressionPredictor
 
 x = [1, 2, 3, 4, 5]
-y = [2, 3, 5, 4, 6]
-reg = fq.regression(x, y)
-print(reg)
-reg.plotXX2("Mere plot ka title", "mere digram ka title", "X ka title", "Y ka title")
+y = [10, 12, 15, 18, 20]
+predictor = RegressionPredictor(x, y, company_name="Apple Inc.")
+print(predictor)
+predictor.plot("Stock Price", "Stock Regression", "Days", "Price")
