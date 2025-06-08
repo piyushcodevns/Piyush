@@ -12,4 +12,6 @@ def makeFilledGraph(x, y, title):
 
 x = [1, 2, 3, 4, 5, 6, 7]
 y = [31, 33, 33, 30, 27, 26, 24]
+
+print()
 makeFilledGraph(x, y, "Filled Graph Example")

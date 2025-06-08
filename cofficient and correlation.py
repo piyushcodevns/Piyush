@@ -11,7 +11,7 @@ sigma_x2 = sum(x2)
 sigma_y2 = sum(y2)  
 sigma_xy = sum(xy)
 
-b= (n *sigma_xy-sigma_x*sigma_y)/(n*sigma_x2-sigma_x**2)
+b= (n *sigma_xy-sigma_x*sigma_y)/(n*sigma_x2-sigma_x*sigma_x)
 a= (sigma_y-b*sigma_x)/n
 r=(n*sigma_xy -sigma_x*sigma_y)/((n*sigma_x2-sigma_x**2)*(n*sigma_y2-sigma_y**2))**0.5
 
