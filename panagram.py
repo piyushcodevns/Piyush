@@ -1,6 +1,5 @@
 # Check if a sentence is a pangram
 
-
 def is_pangram(sentence):
     sentence = sentence.lower().strip()
     letters = set(sentence)
@@ -8,7 +7,6 @@ def is_pangram(sentence):
     alphabet = "abcdefghijklmnopqrstuvwxyz"
     for letter in alphabet:
         if letter not in letters:
-            # print(f"Missing letter: {letter}")
             return False
 
     return True
