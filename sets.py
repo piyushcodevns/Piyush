@@ -11,5 +11,5 @@ a.remove(2)
 print("After removing 2 from a:", a)
 b.discard(5)
 print("After discarding 5 from b:", b)
-b.discard(7)  # No error if 7 is not present
+b.discard(7)
 print("After discarding 7 from b (no error):", b)
