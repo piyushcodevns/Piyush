@@ -32,7 +32,7 @@
 #     print("Right Angled Triangle")
 # else:
 #     print("Scalene Triangle")
-
+    
 # Check for pass, fail and division given marks in 3 subjects. 40 is passing marks. 3rd division >=40 <50, >=50 <60 2nd, >=60 1st.
 # math=59
 # science=60

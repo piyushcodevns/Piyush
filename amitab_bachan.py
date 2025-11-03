@@ -102,7 +102,7 @@ r = (n * sum_xy - sum_x * sum_y) / (
     (n * sum_x2 - sum_x * sum_x) * (n * sum_y2 - sum_y * sum_y)
 ) ** 0.5
 
-yy=[i*b + a for i in x]
+yy = [i * b + a for i in x]
 
 print(f"Regression Line: y = {b:.2f}x + {a:.2f}")
 print(f"Correlation Coefficient (r): {r:.3f}")

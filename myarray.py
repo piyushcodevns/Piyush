@@ -1,5 +1,5 @@
 #Find the largest/smallest element in an array.
-numbers=[1,2,3,4,5,6,7]
+numbers=[-7,-6,-5,-4,-3,-2,-9]
 largest=numbers[0]
 for i in numbers:
     if i > largest:
