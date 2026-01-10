@@ -1,10 +1,3 @@
-# x=5
-# diff=2
-# for i in range(20):
-#     print(x,end=", ")
-#     x=x+diff
-#     diff=6-diff
-
 x=2
 for i in range(2,17):
     print(x,end=", ")
