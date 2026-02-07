@@ -8,3 +8,4 @@ for i in range(n):
             minpos = j
     arr[i], arr[minpos] = arr[minpos], arr[i]
     print(arr)
+ 
